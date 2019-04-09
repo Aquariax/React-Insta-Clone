@@ -1,16 +1,17 @@
+
 import React from 'react';
 // import Images from '../../Images/favicon.png';
 
- import './SearchBar.css';
-const SearchBar = () => {
+import './SearchBar.css';
+const SearchBar = props => {
     return (
-
-       <div className="search-bar-wrapper">
+  
+      <div className="search-bar-wrapper">
         <div className="social">
         <i className="fa fa-instagram" />
         </div>
         <div>
-          <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
         </div>
         <div className="social-wrapper">
           <div className="social">
@@ -25,8 +26,8 @@ const SearchBar = () => {
         </div>
         {/* <img src={Images} /> */}
       </div>
-
-     );
+   
+    );
   };
-
-   export default SearchBar;
+  
+  export default SearchBar;
